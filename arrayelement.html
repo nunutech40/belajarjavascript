@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="paragraf">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Quo quaerat recusandae qui ullam eaque cumque ea fugit,
+        debitis commodi ipsum illo dolorum consequatur sed laudantium suscipit quis magni,
+        maiores in? 1</p>
+
+    <p class="paragraf">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Quo quaerat recusandae qui ullam eaque cumque ea fugit,
+        debitis commodi ipsum illo dolorum consequatur sed laudantium suscipit quis magni,
+        maiores in? 2</p>
+
+    <p class="paragraf">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Quo quaerat recusandae qui ullam eaque cumque ea fugit,
+        debitis commodi ipsum illo dolorum consequatur sed laudantium suscipit quis magni,
+        maiores in? 3</p>
+
+    <script >
+        var paragraf = document.getElementsByClassName("paragraf");
+        
+        setInterval(() => {
+            console.log("interval");
+            paragraf[0].style.color = "red"
+            paragraf[1].style.color = "yellow"
+            paragraf[2].style.color = "blue"
+
+            setTimeout(() => {
+                console.log("timeout");
+                paragraf[0].style.color = "black"
+                paragraf[1].style.color = "black"
+                paragraf[2].style.color = "black"
+            }, 500)
+        }, 1000);
+
+        var count = 0;
+        setInterval(() => {
+            count ++;
+            console.log("cek count" + count);
+        }, 1000);
+        
+
+    </script>
+</body>
+</html>

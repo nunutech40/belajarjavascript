@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX</title>
+</head>
+<body>
+    <h1>Tutorial Ajax</h1>
+    <div id="result"></div>
+    <button onclick="loadContent();">Load Content</button>
+
+    <script>
+        function loadContent(){
+            // membuat object XMLHTTPRequest
+            var xhr = new XMLHttpRequest();
+
+            var url = "https://api.github.com/users/petanikode";
+            xhr.onreadystatechange = function() {
+                document.getElementById("result").innerHTML = "Lagi Loading...";
+                
+                setInterval(() => {
+                    if(this.readyState == 4 && this.status == 200){
+                    document.getElementById("result").innerHTML = "";
+                    document.getElementById("result").innerHTML = this.responseText;
+                }
+                }, 1000);
+                
+            };
+            xhr.open("GET", url, true);
+            xhr.send();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membuat Elememnt Dengan DOM</title>
+</head>
+<body>
+    <script>
+        // membuat element h1
+        var judul = document.createElement("h1");
+        var article = document.createElement("article")
+
+        // mengisi kontent element
+        judul.textContent = "Belajar Javascript";
+        article.textContent = "Ini adalah isi dari articel cara membuat artikel dari dom, atau memanfaatkan dom."
+
+        // menambahkan element pada tag body
+        document.body.append(judul);
+        document.body.append(article);
+    </script>
+</body>
+</html>
